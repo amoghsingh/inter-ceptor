@@ -6,6 +6,7 @@ import "./styles.scss";
 
 const Header = () => {
   const location = useLocation();
+  const userid = location.pathname.split("/")[2];
 
   return (
     <>
@@ -13,7 +14,9 @@ const Header = () => {
         <Link to="/">
           <img src={logo} alt="logo" width="80px" height="60px" />
         </Link>
-        {location.pathname.includes("/posts/") ? <CreatePostForm /> : null}
+        {location.pathname.includes("/posts") ? (
+          <CreatePostForm userid={parseInt(userid)} />
+        ) : null}
       </header>
     </>
   );

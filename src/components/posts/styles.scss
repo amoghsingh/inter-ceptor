@@ -6,6 +6,7 @@
 }
 
 .post-card{
+    position: relative;
     padding:10px;
     background: hwb(234 63% 3%);
     margin:10px;
@@ -16,6 +17,32 @@
     background: #fff78c;
     box-shadow:0px 1px 5px 2px #e6e3bf ;
 }
+
+.edit-icon{
+    display: none;
+    position: absolute;
+    top:8px;
+    right:30px;
+
+}
+
+
+.del-icon{
+    display: none;
+    position: absolute;
+    top:8px;
+    right:8px;
+
+}
+
+.post-card:hover .edit-icon{
+    display: block;
+}
+
+.post-card:hover .del-icon{
+    display: block;
+}
+
 
 strong{
     display: block;

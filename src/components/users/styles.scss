@@ -3,7 +3,6 @@
     margin:10px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    flex:1;
 }
 
 .user-card{
@@ -23,4 +22,23 @@
     position: absolute;
     top:40%;
     left:40%;
+}
+
+
+.pbar-container{
+height: 5px;
+width:100%;
+position: -webkit-sticky;
+position: sticky;
+background: #eff7c4;
+top:0;
+}
+
+.pbar{
+    position: -webkit-sticky;
+    position: sticky;
+    width:0%;
+    background: #172392;
+    height:5px;
+    top:0;
 }

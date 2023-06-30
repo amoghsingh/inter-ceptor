@@ -6,15 +6,12 @@ import store from "./features/store";
 import { Provider } from "react-redux";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
-import { AppProvider } from "./context";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <AppProvider>
-        <App />
-      </AppProvider>
+      <App />
     </Provider>
   </React.StrictMode>
 );

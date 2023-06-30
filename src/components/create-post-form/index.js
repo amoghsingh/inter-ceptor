@@ -1,24 +1,27 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import "./styles.scss";
-import { useGlobalContext } from "../../context";
 import { createAsyncPost } from "../../features/post-slice";
 import { useDispatch } from "react-redux";
 
-const CreatePostForm = () => {
+const CreatePostForm = (props) => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-  const { userid } = useGlobalContext();
   const dispatch = useDispatch();
 
   const state = {
     title: "",
     body: "",
-    userid: userid,
+    userId: "",
   };
+
   const [formData, setFormData] = useState(state);
+
+  useEffect(() => {
+    setFormData({ ...formData, userId: props.userid });
+  }, [props.userid]);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
