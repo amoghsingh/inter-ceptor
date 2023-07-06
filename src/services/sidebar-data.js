@@ -16,14 +16,14 @@ export const sidebarData = [
     link: "/",
   },
   {
-    title: "About Us",
+    title: "Cards",
     icon: <FontAwesomeIcon icon={faBuilding} />,
-    link: "/about-us",
+    link: "/cards",
   },
   {
-    title: "Events",
+    title: "Gallery",
     icon: <FontAwesomeIcon icon={faCalendar} />,
-    link: "/events",
+    link: "/gallery",
   },
   {
     title: "Services",

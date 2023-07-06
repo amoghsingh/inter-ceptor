@@ -6,6 +6,8 @@ import Header from "./components/header";
 import Posts from "./components/posts";
 import Post from "./components/post";
 import Sidebar from "./components/sidebar";
+import Cards from "./components/cards";
+import Gallery from "./components/gallery";
 
 function App() {
   return (
@@ -15,9 +17,11 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/cards" element={<Cards />} />
           <Route path="*" element={<PageNotFound />} />
           <Route path="/users/:userid/posts" element={<Posts />} />
           <Route path="/users/:userid/posts/:postid" element={<Post />} />
+          <Route path="/gallery" element={<Gallery />} />
         </Routes>
       </Router>
     </>
